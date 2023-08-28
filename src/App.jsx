@@ -8,6 +8,7 @@ import NotFoundPage from './pages/NotFound';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import i18n from './i18n';
 import { I18nextProvider } from 'react-i18next';
+import UserDetails from './pages/UserDetails';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -29,6 +30,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Routes>
               <Route path="*" element={<NotFoundPage />} />
               <Route path="/" element={<Root />} />
+              <Route path="/users/:id" element={<UserDetails />} />
             </Routes>
           </Router>
         </InfrastructureProvider>
