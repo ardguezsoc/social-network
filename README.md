@@ -1,15 +1,31 @@
 # Social Network
 
-This project was bootstrapped with [Vite](https://vitejs.dev/)
-The package manager used for this project has been [pnpm]('https://pnpm.io/es/') 📦 (recommended to get faste compilation)
+This project was bootstrapped with [Vite](https://vitejs.dev/) using the [TS](https://www.typescriptlang.org/) template, which is a tool that enables the creation of React projects with lightning-fast compilation time ⚡
+
+The package manager used for this project is [pnpm](https://pnpm.io/es/) 📦, which is known for being 3 times faster than npm.
+
+All the images have been optimized using [squoosh](https://squoosh.app/) 🖼️ to reduce their size to a minimum and convert them to the webp format (webp images are typically 15%-34% smaller than images in other formats).
 
 ## Run project 🎮
 
-To execute this project you will need the .env sent in the email, then:
+To execute this project you will need to do the next steps:
 
 1. nvm use recommended to use the node version defined (optional)
 2. npm or pnpm install
 3. npm or pnpm start
+
+### Pages
+
+- Home 🏠:
+  - User can see a list of the social network users.
+
+- User Details 📜:
+
+  - Users can see more information related with the user selected.
+
+- NotFoundPage 🚫:
+  - If a user attempts to access a page that does not exist within the application, they will be directed to a custom 404 page, indicating that the requested page does not exist. This ensures a user-friendly experience when encountering invalid or non-existent URLs.
+
 
 ## Interesting Libraries Added 📘
 
@@ -28,9 +44,27 @@ To execute this project you will need the .env sent in the email, then:
 - [husky](https://github.com/typicode/husky)🐶: Hook library to execute different command in pre-push, pre-commit, commit-msg...
 - [lint-staged](https://github.com/okonet/lint-staged): package useful to apply lint or prettier rules with hooks (executed in pre-commit husky hook 🪝)
 
-## Board 🎫
 
-[Board](https://github.com/users/ardguezsoc/projects/3) used for this project
+## Architecture
+
+- `Pages`: Here you can find the views to be displayed for the user
+- `Components`: items that can be reused in different views
+- `Context`: React API Context used along the aplication
+- `Hooks`: Hooks used in the views to manage some data
+- `Locales`: Json translations files used for Reacti18N
+- `Theme`: The theme used in the project with the css constants
+- `Utils`: General functions that could be reused in the project like it would be in this case the search function with debounce
+
+Depends the complexity of the component or the view these folders could have an own folder of `components` or `utils` to externalize the logistic related with that view and reducing the file length and increasing the redeability as much as possible.
+
+ I  have implemented two layers to handle the API calls:
+
+- `Repositories`: The primary responsibility of repositories would be to handle API endpoint calls and data mapping before passing it to other parts of the application. By centralizing these operations, any future changes in the API's attributes or parameters could be managed more efficiently.
+
+- `Services`: The services layer acts as an intermediary between the repositories and hooks. This layer would handle the more data-centric tasks, such as data modifications or additional operations.
+
+
+`Github` has been used as code repository and running the test in an extenal machine on every main push.
 
 ## Available Scripts 🖥️
 
