@@ -3,7 +3,6 @@ import './index.scss';
 import { useTranslation } from 'react-i18next';
 
 export const Card = ({ userItem, navigateTo }) => {
-  console.log('userItemAAA', userItem);
   const { name, userName, id } = userItem;
   const { t } = useTranslation();
 
@@ -11,15 +10,16 @@ export const Card = ({ userItem, navigateTo }) => {
     <div className="productContainer">
       <div className="product">
         <div className="productImage">
+          <img src="/images/profile.webp" alt="product-image" />
           <div className="namePrice">
             <div>
               <h3>{name}</h3>
               <h4>{userName}</h4>
             </div>
           </div>
-          <p>{t('mobileDescription')}</p>
+          <p>{t('userDescription')}</p>
           <button className="productButton" onClick={() => navigateTo(`/users/${id}`)}>
-            {t('viewMore')}
+            {t('goToProfile')}
           </button>
         </div>
       </div>
