@@ -1,0 +1,27 @@
+@import '../../../../theme.scss';
+
+.rightMobileDetailContainer {
+  display: flex;
+  flex-direction: column;
+}
+img.sticky {
+  position: sticky;
+  top: 74px;
+  width: 400px;
+  margin-right: 3rem;
+  height: 100%;
+}
+.mobileDetailLabel {
+  font-weight: bold;
+  font-size: 14px;
+  color: $primary-hover;
+}
+
+@media (max-width: 768px) {
+  img.sticky {
+    position: inherit;
+    width: 200px;
+    margin-top: 74px;
+    align-self: center;
+  }
+}
