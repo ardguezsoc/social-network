@@ -1,0 +1,13 @@
+.wrapperGrid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .wrapperGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
