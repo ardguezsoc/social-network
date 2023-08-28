@@ -1,0 +1,66 @@
+@import '../theme.scss';
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: $black;
+  background-color: $white;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 450;
+  color: $secondary;
+  text-decoration: inherit;
+  cursor: pointer;
+
+  &:hover {
+    color: $secondary-hover;
+  }
+}
+
+.mainContainer {
+  margin: 44px auto 0px;
+  width: 100vw;
+  padding-bottom: 15px;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: $primary;
+  color: $soft-white;
+  cursor: pointer;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}

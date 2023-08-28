@@ -1,0 +1,13 @@
+@import '../../../theme.scss';
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $primary-hover;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.notFound {
+  cursor: pointer;
+}
